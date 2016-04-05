@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prosolar</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<% if current_user %>
+<%= link_to "Log Out", session_path(current_user), method: :delete %>
+<% else %>
+<%= link_to "Log In", new_session_path %>
+<%= link_to "Sign Up", new_user_path %>
+<% end %>
+
+<% flash.each do |key, value| %>
+<%= value %>
+<% end %>
+
+<%= yield %>
+
+</body>
+</html>
