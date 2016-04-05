@@ -1,11 +1,25 @@
-
+<!--
 <div class="center">
+
 <%= form_tag new_commissioning_form_path, method: :get do %>
 <h3> Types of inverter on job </h3>
 Types<%= select_tag "type_of_inverters", "<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>".html_safe %>
 <br>
 <br>
-<%= submit_tag "Next Section" %>
+<%= submit_tag "Next Section", class: "btn btn-default" %>
 <% end %>
 <%= link_to 'Back', commissioning_forms_path %>
+</div>
+-->
+
+
+<div class="center">
+
+<form accept-charset="UTF-8" action="/commissioning_forms/new" method="get"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+<h3> Types of inverter on job </h3>
+Types<select id="type_of_inverters" class="form-control" name="type_of_inverters"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select>
+<br>
+<br>
+<input class="btn btn-default" name="commit" type="submit" value="Next Section" />
+</form><a href="/commissioning_forms">Back</a>
 </div>

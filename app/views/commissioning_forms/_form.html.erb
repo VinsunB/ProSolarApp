@@ -1,4 +1,6 @@
 <%= form_for(@commissioning_form) do |f| %>
+ 
+
   <% if @commissioning_form.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@commissioning_form.errors.count, "error") %> prohibited this commissioning_form from being saved:</h2>
@@ -11,45 +13,46 @@
     </div>
   <% end %>
 <h3>Customer Info</h3>
-  <div class="field">
+  
+ <div class="form-group">
     <%= f.label :job %><br>
-    <%= f.text_field :job %>
+    <%= f.text_field :job, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :customer_name %><br>
-    <%= f.text_field :customer_name %>
+    <%= f.text_field :customer_name, class: "form-control" %>
   </div>
-  <div class="field">
+   <div class="form-group">
     <%= f.label :job_type %><br>
-    <%= f.select :job_type, ["Commercial", "Residential ", "Other"] %>
+    <%= f.select :job_type, ["Commercial", "Residential ", "Other"], {}, {class: "form-control"}%>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :system_size %><br>
-    <%= f.number_field :system_size %>
+    <%= f.number_field :system_size, class: "form-control" %>
   </div>
-  <div class="field">
+   <div class="form-group">
     <%= f.label :location %><br>
-    <%= f.text_field :location %>
+    <%= f.text_field :location, class: "form-control" %>
   </div>
-  <div class="field">
+   <div class="form-group">
     <%= f.label :physical_address %><br>
-    <%= f.text_field :physical_address %>
+    <%= f.text_field :physical_address, class: "form-control" %>
   </div>
-  <div class="field">
+ <div class="form-group">
     <%= f.label :mailing_address %><br>
-    <%= f.text_field :mailing_address %>
+    <%= f.text_field :mailing_address, class: "form-control" %>
   </div>
-  <div class="field">
+   <div class="form-group">
     <%= f.label :parcel_id %><br>
-    <%= f.text_field :parcel_id %>
+    <%= f.text_field :parcel_id, class: "form-control" %>
   </div>
-  <div class="field">
+   <div class="form-group">
     <%= f.label :customer_phone %><br>
-    <%= f.number_field :customer_phone %>
+    <%= f.number_field :customer_phone, class: "form-control" %>
   </div>
-  <div class="field">
+   <div class="form-group">
     <%= f.label :customer_email %><br>
-    <%= f.text_field :customer_email %>
+    <%= f.text_field :customer_email, class: "form-control" %>
   </div>
 
 
@@ -59,12 +62,12 @@
 <p>
 <%= mod_form.label :mod_type %>
 <br>
-<%= mod_form.text_field :mod_type %>
+<%= mod_form.text_field :mod_type, class: "form-control" %>
 </p>
 <p>
-<%= mod_form.label :qty %>
+<%= mod_form.label :qty%>
 <br>
-<%= mod_form.text_field :qty %>
+<%= mod_form.text_field :qty, class: "form-control" %>
 </p>
 <% end %>
 <br>
@@ -79,36 +82,40 @@
 
 <br>
 <h3> Electrical Info</h3>
-  <div class="field">
+   <div class="form-group">
     <%= f.label :permit %><br>
-    <%= f.text_field :permit %>
+    <%= f.text_field :permit, class: "form-control" %>
   </div>
-  <div class="field">
+   <div class="form-group">
     <%= f.label :installation_completed %><br>
-    <%= f.text_field :installation_completed %>
+    <%= f.text_field :installation_completed, class: "form-control" %>
   </div>
-  <div class="field">
+   <div class="form-group">
     <%= f.label :net_meter_installed %><br>
-    <%= f.text_field :net_meter_installed %>
+    <%= f.text_field :net_meter_installed, class: "form-control" %>
   </div>
-  <div class="field">
+   <div class="form-group">
     <%= f.label :wapa_account %><br>
-    <%= f.text_field :wapa_account %>
+    <%= f.text_field :wapa_account, class: "form-control" %>
   </div>
-  <div class="field">
+   <div class="form-group">
     <%= f.label :project_notes %><br>
-    <%= f.text_area :project_notes %>
+    <%= f.text_area :project_notes, class: "form-control" %>
   </div>
   <div class="actions">
 
-
+ <div class="form-group">
     <%= f.label :commissioning_date %><br>
-    <%= f.text_field :commissioning_date %>
+    <%= f.text_field :commissioning_date, class: "form-control" %>
+  </div>
   <br>
+   <div class="form-group">
     <%= f.label :employee_name %><br>
-    <%= f.text_field :employee_name %>
+    <%= f.text_field :employee_name, class: "form-control" %>
+ </div>
  <br>
-
-<%= f.submit 'save' %> 
+<br>
+<%= f.submit 'Submit', class: "btn btn-default", type:"submit"  %> 
+ 
   </div>
 <% end %>

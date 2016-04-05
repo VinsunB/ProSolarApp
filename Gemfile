@@ -14,8 +14,7 @@ group :production do
    gem 'thin'
   gem 'pg'
 end
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -38,7 +37,11 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'bcrypt', '~> 3.1.7'
 
 #gem 'bootstrap', '~> 4.0', :git => 'https://github.com/twbs/bootstrap-rubygem'
-#gem 'sprockets-rails', '~> 3.0'
+gem 'autoprefixer-rails', '~> 5.2.1'
+gem 'sass-rails', '~> 5.0', '>= 5.0.4'
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'sass', '~> 3.4', '>= 3.4.22'
+gem 'sprockets-rails'
 # Use unicorn as the app server
 # gem 'unicorn'
 
