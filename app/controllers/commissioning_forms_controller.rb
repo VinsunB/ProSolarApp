@@ -39,6 +39,7 @@ end
 
   
   def edit
+  @inverter_number = 0
   @commissioning_form = CommissioningForm.includes([:mods,:inverters]).find(params[:id])
   end
 
