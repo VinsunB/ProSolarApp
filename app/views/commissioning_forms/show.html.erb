@@ -74,8 +74,11 @@
 </p>
 <% end %>
 
+<% if @commissioning_form.inverters != nil %>
 <h2>Inverter Info </h2>
-<% @commissioning_form.inverters.each do |inverter| %>
+<% @commissioning_form.inverters.each_with_index do |inverter, index| %>
+<br>
+<h3>Inverter #<%= index += 1%></h3>
 <p>
 <strong>Inverter Type:</strong>
 <%= inverter.inverter_type%>
@@ -114,7 +117,7 @@
 </p>
 
 <% end %>
-
+<% end %>
 
 <h2> Electrical Info</h2>
 <p>

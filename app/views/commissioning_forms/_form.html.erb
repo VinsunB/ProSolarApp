@@ -75,7 +75,9 @@
 
 
 <%= f.fields_for(:inverters) do |inverter_form| %>
+<% if @inverter_number != nil %>
 <% @inverter_number += 1 %>
+<% end %>
 <%= render :partial => 'inverter_form', :locals => {:f => inverter_form } %>
 <% end %>
 
