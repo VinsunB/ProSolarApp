@@ -73,14 +73,13 @@
 <br>
 
 
-
+<% @inverter_index = 0 %>
 <%= f.fields_for(:inverters) do |inverter_form| %>
-<% if @inverter_number != nil %>
-<% @inverter_number += 1 %>
-<% end %>
-<%= render :partial => 'inverter_form', :locals => {:f => inverter_form } %>
-<% end %>
+<% @inverter_index += 1 %>
 
+<%= render :partial => 'inverter_form', :locals => {:f => inverter_form,inverter_index:   
+  @inverter_index } %>
+<% end %>
 
 <br>
 <h3> Electrical Info</h3>

@@ -31,15 +31,16 @@ end
     @commissioning_form = CommissioningForm.new
   @commissioning_form.mods.build
   
-  @inverter_number = 0
+ 
    params[:type_of_inverters].to_i.times do
-   @commissioning_form.inverters.build
+  
+  @commissioning_form.inverters.build
    end
   end
 
   
   def edit
-  @inverter_number = 0
+ 
   @commissioning_form = CommissioningForm.includes([:mods,:inverters]).find(params[:id])
   end
 
@@ -57,7 +58,6 @@ end
       redirect_to @commissioning_form 
        
       else
-
       flash.now[:errors] = "Error in creating form"
        render :new
 
